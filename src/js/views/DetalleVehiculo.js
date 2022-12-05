@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { AppContext } from "../store/appContext";
 import { useParams } from "react-router-dom";
+import '../../styles/index.css'
 
 const DetalleVehiculo = () => {
   const { uid } = useParams();
@@ -15,9 +16,9 @@ const DetalleVehiculo = () => {
   }, [uid]);
 
   return (
-    <div className="contenedor-general card mb-3">
+    <div className="container contenedor card my-3">
       <img
-        src="https://img.freepik.com/free-vector/futuristic-technology-dark-blue-background_87202-1321.jpg?w=996&t=st=1664725745~exp=1664726345~hmac=7af412aafd8ffb6b5e29b2ff119585847ac39435946285d3c19df4d5d836a8b7"
+        src="https://th.bing.com/th/id/OIP.hnrI-IT31UB9-VX0K0CJCQHaE8?pid=ImgDet&rs=1"
         className="card-img-top"
         alt="..."
       />
@@ -32,11 +33,11 @@ const DetalleVehiculo = () => {
           <br />
           Algunos datos: <br />
           <ul>
-            <li><i>Modelo:</i>{store.vehiculo?.result?.properties?.model}</li>
-            <li><i>Clase:</i>{store.vehiculo?.result?.properties?.vehicle_class} </li>
-            <li><i>Tripulación:</i> {store.vehiculo?.result?.properties?.crew} </li>
-            <li><i>Longitud:</i>{store.vehiculo?.result?.properties?.length}  </li>
-            <li><i>Costo:</i>{store.vehiculo?.result?.properties?.cost_in_credits}  </li>
+            <li>Modelo: {store.vehiculo?.result?.properties?.model}</li>
+            <li>Clase: {store.vehiculo?.result?.properties?.vehicle_class} </li>
+            <li>Tripulación:  {store.vehiculo?.result?.properties?.crew} </li>
+            <li>Longitud: {store.vehiculo?.result?.properties?.length}  </li>
+            <li>Costo: {store.vehiculo?.result?.properties?.cost_in_credits}  </li>
           </ul>
         </p>
         <p className="card-text">

@@ -16,8 +16,8 @@ const DetallePersonaje = () => {
 
   return (
     <>
-    <div className="container">
-    <div className="card m-3" >
+    <div className="container ">
+    <div className="card m-3 " >
   <div className="row ">
     <div className="col-md-4">
       <img src="https://th.bing.com/th/id/OIP.hnrI-IT31UB9-VX0K0CJCQHaE8?pid=ImgDet&rs=1" className="img-fluid h-100" 
@@ -31,11 +31,11 @@ const DetallePersonaje = () => {
           sunt quasi vel. Commodi, sapiente dolorem excepturi quasi cumque</p>
         Algunos datos: <br />
         <ul>
-            <li><i>Año de nacimiento:</i>{store.personaje?.result?.properties?.birth_year}</li>
-            <li><i>Color de ojos:</i>{store.personaje?.result?.properties?.eye_color} </li>
-            <li><i>Género:</i> {store.personaje?.result?.properties?.gender} </li>
-            <li><i>Altura:</i>{store.personaje?.result?.properties?.height}  </li>
-            <li><i>Color de piel:</i>{store.personaje?.result?.properties?.skin_color}  </li>
+            <li>Año de nacimiento:{store.personaje?.result?.properties?.birth_year}</li>
+            <li>Color de ojos:{store.personaje?.result?.properties?.eye_color} </li>
+            <li>Género: {store.personaje?.result?.properties?.gender} </li>
+            <li>Altura:{store.personaje?.result?.properties?.height}  </li>
+            <li>Color de piel:{store.personaje?.result?.properties?.skin_color}  </li>
           </ul>
       </div>
     </div>
