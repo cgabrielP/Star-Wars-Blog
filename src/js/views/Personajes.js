@@ -19,7 +19,6 @@ const Personajes = () => {
                   <div
                     className="col-md-3 my-3"
                     key={uid}
-                    id="contenedor-cartas"
                   >
                     <CardPersonajes name={name} uid={uid} />
                   </div>

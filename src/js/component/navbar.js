@@ -7,7 +7,7 @@ const Navbar = () => {
   const { store } = useContext(AppContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
+      <div className="container">
         <Link className="navbar-brand" to="#">
 		<i className="fa-solid fa-jedi"></i>
         </Link>
