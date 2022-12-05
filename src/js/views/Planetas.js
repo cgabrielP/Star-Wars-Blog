@@ -8,14 +8,14 @@ const Planetas = () => {
 
   return (
     <>
-    <div className="principal-personajes">
+    <div className="container mt-2">
       <h1>Planetas</h1>
       <div className="row">
         {!!store.planetas.results &&
           store.planetas.results.length > 0 &&
           store.planetas.results.map(({ name, uid }) => {
             return (
-              <div className="col-md-3" key={uid} id="contenedor-cartas">
+              <div className="col-md-3 my-3" key={uid} id="contenedor-cartas">
                 <CardPlanetas name={name} uid={uid} />
               </div>
             )

@@ -7,8 +7,8 @@ const CardPlanetas = ({name, uid}) => {
   const {actions} = useContext(AppContext);
 
   return (
-    <div className="card" id="cartas">
-      <img src="https://images.pexels.com/photos/997704/pexels-photo-997704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="card-img-top" alt="..." />
+    <div className="card" >
+      <img src="https://th.bing.com/th/id/R.1bcbc98e5ba7cf0e3e0fd19f4d8b6d09?rik=YRdsKmL5SwuGyQ&riu=http%3a%2f%2fwww.muraldecal.com%2fen%2fimg%2fas311eng-jpg%2ffolder%2fproducts-listado-merchanthover%2fwall-stickers-may-the-force-be-with-you.jpg&ehk=uCwkW5badf31GJONE0bv4iokYpE3AOmEfxU9wUHi3lY%3d&risl=&pid=ImgRaw&r=0" className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">
@@ -22,7 +22,7 @@ const CardPlanetas = ({name, uid}) => {
         >
           Ver más
         </Link>
-        <button type="button" className="add-favoritos btn btn-light" onClick={() => actions.agregarFavoritos({uid, name, type: "planeta"})}>Add Favoritos</button>
+        <button type="button" className="mx-2 btn btn-light" onClick={() => actions.agregarFavoritos({uid, name, type: "planeta"})}>Añadir a Favoritos</button>
 
       </div>
     </div>

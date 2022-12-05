@@ -1,8 +1,8 @@
 import React from 'react'
-
+import '../../styles/footer.css'
 const Footer = () => {
   return (
-    <div className='text-center fs-5 bg-light p-4'>@cgabrielP</div>
+    <footer className='footer text-center fs-5 bg-light p-4'>@cgabrielP</footer>
   )
 }
 

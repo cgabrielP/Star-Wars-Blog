@@ -9,14 +9,14 @@ console.log(store.vehiculos)
 },[])
 return (
     <>
-      <div className="principal-personajes">
+      <div className="container mt-2">
         <h1>Vehículos</h1>
         <div className="row">
           {!!store.vehiculos.results &&
             store.vehiculos.results.length > 0 &&
             store.vehiculos.results.map(({ name, uid }) => {
               return (
-                <div className="col-md-3" key={uid} id="contenedor-cartas">
+                <div className="col-md-3 my-3" key={uid} id="contenedor-cartas">
                   <CardVehiculos name={name} uid={uid} />
                 </div>
               );

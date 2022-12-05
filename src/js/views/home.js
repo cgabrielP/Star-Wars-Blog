@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/home.css";
 
 export const Home = () => (
   <div className="text-center mt-5">
@@ -8,7 +7,7 @@ export const Home = () => (
 	<p>Toca la imagen</p>
     <Link to={"/personajes"}>
       <img
-        src="https://i.pinimg.com/originals/e7/7f/23/e77f23e671c4d38973513c32e7eaf492.jpg"
+        src="https://th.bing.com/th/id/OIP.ojAFHFVKBWt2EXJyb2kzlQHaHJ?pid=ImgDet&w=699&h=675&rs=1"
         alt="Mando"
       ></img>
     </Link>

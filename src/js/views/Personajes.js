@@ -7,7 +7,7 @@ const Personajes = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container mt-2">
         <div className="principal-personajes d-fluid">
           <h1>Personajes</h1>
 
