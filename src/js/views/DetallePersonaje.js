@@ -16,32 +16,35 @@ const DetallePersonaje = () => {
 
   return (
     <>
-    <div className="container ">
-    <div className="card m-3 " >
-  <div className="row ">
-    <div className="col-md-4">
-      <img src="https://th.bing.com/th/id/OIP.hnrI-IT31UB9-VX0K0CJCQHaE8?pid=ImgDet&rs=1" className="img-fluid h-100" 
-     alt="..."/>
-    </div>
-    <div className="col-md-8">
-      <div className="card-body mx-5">
+     <div className="container contenedor card my-3 ">
+      <img
+        src="https://th.bing.com/th/id/OIP.hnrI-IT31UB9-VX0K0CJCQHaE8?pid=ImgDet&rs=1"
+        className="card-img-top"
+        alt="..."
+      />
+      <div className="card-body">
         <h5 className="card-title">{store.personaje?.result?.properties?.name}</h5>
-        <p className="card-text">     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+        <p className="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
           deserunt harum, natus odio sequi delectus ea velit praesentium, sit,
-          sunt quasi vel. Commodi, sapiente dolorem excepturi quasi cumque</p>
-        Algunos datos: <br />
-        <ul>
-            <li>Año de nacimiento:{store.personaje?.result?.properties?.birth_year}</li>
-            <li>Color de ojos:{store.personaje?.result?.properties?.eye_color} </li>
-            <li>Género: {store.personaje?.result?.properties?.gender} </li>
-            <li>Altura:{store.personaje?.result?.properties?.height}  </li>
-            <li>Color de piel:{store.personaje?.result?.properties?.skin_color}  </li>
+          sunt quasi vel. Commodi, sapiente dolorem excepturi quasi cumque
+          soluta quia!
+          <br />
+          <br />
+          Algunos datos: <br />
+          <ul>
+            <li>Clima: {store.personaje?.result?.properties?.climate}</li>
+            <li>Terreno: {store.personaje?.result?.properties?.terrain} </li>
+            <li>Población:  {store.personaje?.result?.properties?.population} </li>
+            <li>Diametro: {store.personaje?.result?.properties?.diameter}  </li>
+            <li>Periodo de rotación: {store.personaje?.result?.properties?.rotation_period}  </li>
           </ul>
+        </p>
+        <p className="card-text">
+          <small className="text-muted">{store.personaje?.result?.properties?.uid}</small>
+        </p>
       </div>
     </div>
-  </div>
-</div>
-</div>
 
     </>
   );

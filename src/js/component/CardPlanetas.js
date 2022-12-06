@@ -1,10 +1,11 @@
-import React, {useContext } from "react";
+import React, {useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../store/appContext";
 
 const CardPlanetas = ({name, uid}) => {
   
   const {actions} = useContext(AppContext);
+ const[icon, setIcon]=useState('regular')
 
   return (
     <div className="card" >
@@ -22,7 +23,7 @@ const CardPlanetas = ({name, uid}) => {
         >
           Ver más
         </Link>
-        <button type="button" className="mx-2 btn btn-light" onClick={() => actions.agregarFavoritos({uid, name, type: "planeta"})}>Añadir a Favoritos</button>
+        <button type="button" className="mx-2 btn btn-light" onClick={() => {actions.agregarFavoritos({uid, name, type: "planeta"},setIcon('solid'))}}><i className={`fa-${icon} fa-heart`}></i></button>
 
       </div>
     </div>
