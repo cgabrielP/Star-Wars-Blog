@@ -23,7 +23,7 @@ const CardPlanetas = ({name, uid}) => {
         >
           Ver más
         </Link>
-        <button type="button" className="mx-2 btn btn-light" onClick={() => {actions.agregarFavoritos({uid, name, type: "planeta"},setIcon('solid'))}}><i className={`fa-${icon} fa-heart`}></i></button>
+        <button type="button" className="mx-2 btn btn-light" onClick={() => {actions.agregarFavoritos({uid, name, type: "planeta"}),icon==='regular'?setIcon('solid'):setIcon('regular')}}><i className={`fa-${icon} fa-heart`}></i></button>
 
       </div>
     </div>

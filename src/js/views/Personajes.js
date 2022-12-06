@@ -24,7 +24,6 @@ const Personajes = () => {
                   </div>
                 );
               })}
-            ;
           </div>
         </div>
       </div>
