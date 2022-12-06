@@ -4,12 +4,12 @@ import { AppContext } from "../store/appContext";
 import Dropdown from "./dropdown";
 
 const Navbar = () => {
-  const { store } = useContext(AppContext);
+  const { store, actions } = useContext(AppContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         <Link className="navbar-brand" to="#">
-		<i className="fa-solid fa-jedi"></i>
+          <i className="fa-solid fa-jedi"></i>
         </Link>
         <button
           className="navbar-toggler"
@@ -59,7 +59,18 @@ const Navbar = () => {
               {!!store.favoritos &&
                 store.favoritos.length > 0 &&
                 store.favoritos.map(({ name, uid, type }, index) => {
-                  return <Dropdown name={name} uid={uid} key={uid+index} type={type}/>;
+                  return (
+                    <>
+                      <Dropdown
+                        name={name}
+                        uid={uid}
+                        key={uid + index}
+                        type={type}
+                        index={index}
+                      />
+                     
+                    </>
+                  );
                 })}
             </ul>
           </div>

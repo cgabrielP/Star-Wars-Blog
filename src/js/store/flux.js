@@ -59,7 +59,16 @@ const getState = ({ getStore, setStore }) => {
                 const favoritosActualizado = [favorito, ...favoritos];
                 setStore({ favoritos: favoritosActualizado });
 
-            }
+            },
+            eliminarFavoritos: (index) => {
+                const { favoritos } = getStore();         
+               /*  setStore({favoritos: favoritos.pop(uid), ...favoritos}) */
+                /* setStore({favoritos: favoritos.filter(favs=>favs.uid !== uid).splice(uid,1)}) */
+                setStore({favoritos: [
+					...favoritos.slice(0, index),
+					...favoritos.slice(index + 1, favoritos.length)
+					]}) ;
+              } 
 
         }
 
